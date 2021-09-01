@@ -1,11 +1,10 @@
 ---
-title: "Prelim Prep"
+title: "Q5: Colocalization"
 author: "Chao Dai"
 date: "2021-09-10"
 output: html_notebook
 ---
 
-## Q5. Colocalization
 
 #### a) Suppose a GWAS variant associated with the disease trait of interest is also associated with the expression of a gene X in some tissue. Can we conclude that X is a causal gene of the disease?
 
