@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="daiuc" />
 
+<meta name="date" content="2021-09-10" />
 
-<title>Home</title>
+<title>Q2: Gene Therapy</title>
 
 <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -29,6 +31,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -228,6 +233,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -235,6 +303,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -272,7 +350,9 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Home</h1>
+<h1 class="title toc-ignore">Q2: Gene Therapy</h1>
+<h4 class="author">daiuc</h4>
+<h4 class="date">2021-09-10</h4>
 
 </div>
 
@@ -363,7 +443,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML (<code>docs/index.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/q2.Rmd</code>) and HTML (<code>docs/q2.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -392,7 +472,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/daiuc/prelim-prep/blob/b4e3ccc34fb810c7e3a842fe8be60fce17535353/analysis/index.Rmd" target="_blank">b4e3ccc</a>
+<a href="https://github.com/daiuc/prelim-prep/blob/b4e3ccc34fb810c7e3a842fe8be60fce17535353/analysis/q2.Rmd" target="_blank">b4e3ccc</a>
 </td>
 <td>
 daiuc
@@ -404,125 +484,6 @@ daiuc
 wflow_publish(c(“analysis/index.Rmd”, “analysis/q2.Rmd”, “analysis/q5.Rmd”,
 </td>
 </tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/daiuc/prelim-prep/07ccd64c020f10ca92faad0094561cf23029aa09/docs/index.html" target="_blank">07ccd64</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/daiuc/prelim-prep/blob/a016883a43fa0ab6269fa6d1c561ce2195781a28/analysis/index.Rmd" target="_blank">a016883</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-wflow_publish(c(“analysis/index.Rmd”, “analysis/prep.Rmd”))
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/daiuc/prelim-prep/9461470533a70ab82c05e73052db05a4ae8bb2a4/docs/index.html" target="_blank">9461470</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/daiuc/prelim-prep/blob/dea742766b37d8b5b06fb4d4beca1d67cf65a2a0/analysis/index.Rmd" target="_blank">dea7427</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-wflow_publish(c(“analysis/about.Rmd”, “analysis/index.Rmd”, “analysis/license.Rmd”,
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/daiuc/prelim-prep/d5eef6e784e5553c96292311f3a25d2e8c0dfe83/docs/index.html" target="_blank">d5eef6e</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/daiuc/prelim-prep/blob/fd37f62231ef089ce3be031bff0a7fad3484c7ad/analysis/index.Rmd" target="_blank">fd37f62</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-wflow_publish(c(“analysis/about.Rmd”, “analysis/index.Rmd”, “analysis/license.Rmd”,
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/daiuc/prelim-prep/blob/981b4be8f1953ddb883aaad33b506b0326385f69/analysis/index.Rmd" target="_blank">981b4be</a>
-</td>
-<td>
-daiuc
-</td>
-<td>
-2021-08-31
-</td>
-<td>
-Start workflowr project.
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -530,17 +491,13 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Welcome to my research website.</p>
-<div id="prelim-preparation" class="section level1">
-<h1>Prelim preparation</h1>
-<ul>
-<li><a href="q2.html">Q2: Gene Therapy</a></li>
-<li><a href="q5.html">Q5: Colocolization</a></li>
-<li><a href="q8.html">Q8: Enhancers</a></li>
-</ul>
+<div id="a" class="section level2">
+<h2>a)</h2>
+<hr />
 </div>
-<div id="prelim-presentation" class="section level1">
-<h1>Prelim presentation</h1>
+<div id="b" class="section level2">
+<h2>b)</h2>
+<hr />
 </div>
 
 
@@ -559,6 +516,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -591,6 +550,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
