@@ -12,6 +12,8 @@ Welcome to my research website.
 
 # Prelim preparation
 
-- [link](prep.html)
+- [Q2: Gene Therapy](q2.html)
+- [Q5: Colocolization](q5.html)
+- [Q8: Enhancers](q8.html)
 
 # Prelim presentation

@@ -1,0 +1,21 @@
+---
+title: "Q2: Gene Therapy"
+author: "daiuc"
+date: "2021-09-10"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## a)
+
+
+
+---
+
+
+## b)
+
+
+---
+
