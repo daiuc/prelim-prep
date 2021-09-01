@@ -6,7 +6,9 @@ output: html_notebook
 ---
 
 
-## a) Suppose a GWAS variant associated with the disease trait of interest is also associated with the expression of a gene X in some tissue. Can we conclude that X is a causal gene of the disease?
+## a) 
+
+**Suppose a GWAS variant associated with the disease trait of interest is also associated with the expression of a gene X in some tissue. Can we conclude that X is a causal gene of the disease?**
 
 No. We cannot conclude X is a causal gene ofo the disease simply because the variant is associated both with the disease trait and gene X expression.
 
