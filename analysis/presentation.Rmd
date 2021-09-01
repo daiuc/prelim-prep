@@ -1,0 +1,15 @@
+---
+title: "presentation"
+author: "daiuc"
+date: "2021-08-31"
+output: ioslides_presentation
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r}
+
+```
+

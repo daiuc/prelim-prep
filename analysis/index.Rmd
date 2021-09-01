@@ -17,3 +17,5 @@ Welcome to my research website.
 - [Q8: Enhancers](q8.html)
 
 # Prelim presentation
+
+- [Presentation slides](presentation.html)
