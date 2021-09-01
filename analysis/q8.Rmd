@@ -7,9 +7,18 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Introduction
+## Question 1
 
-```{r}
+Describe how enhancer elements have historically been identified and characterized. What qualities are necessary to classify a genomic location as an active enhancer?
 
-```
+---
 
+## Question 2
+
+Explain why Sun et al. chose H3K27ac ChIP-seq for their study. Identify at least two alternatives to their approach and discuss the advantages and disadvantages of each approach.
+
+---
+
+## Question 3
+
+Discuss whether the enhancer definition is the same. Based on your discussion of different methods, do you think that all of these approaches identify enhancer based on a common definition? In your opinion, what would be a sensible definition of an enhancer?

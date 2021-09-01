@@ -7,15 +7,17 @@ editor_options:
   chunk_output_type: console
 ---
 
-## a)
+## a) Please describe the major classes of diseases targeted by gene therapy either as approved treatments or at the research stage. Please explain why these diseases are particularly conducive to gene therapy. Conversely, please describe what types of diseases are not conducive to gene therapy at present and why.
 
 
 
 ---
 
 
-## b)
+## b) What are the major limitations and challenges in the effective use of gene therapy?
 
 
 ---
 
+
+## c) Lentivirus (LV) and adeno-associated virus (AAV) are currently the most popular gene therapy vectors. Please describe the pros and cons of LV and AAV, and what types of diseases they are each suitable for.
