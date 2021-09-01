@@ -12,6 +12,6 @@ Welcome to my research website.
 
 # Prelim preparation
 
-- [link]()
+- [link](doc/prep.html)
 
 # Prelim presentation
