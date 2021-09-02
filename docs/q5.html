@@ -408,16 +408,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree807eeb0f47f3fe55cd02229837fbaf6865987db5targetblank807eeb0a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/daiuc/prelim-prep/tree/807eeb0f47f3fe55cd02229837fbaf6865987db5" target="_blank">807eeb0</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree56ded550fe47e438ab9997d007565fc1a9864599targetblank56ded55a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/daiuc/prelim-prep/tree/56ded550fe47e438ab9997d007565fc1a9864599" target="_blank">56ded55</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree807eeb0f47f3fe55cd02229837fbaf6865987db5targetblank807eeb0a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree56ded550fe47e438ab9997d007565fc1a9864599targetblank56ded55a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/daiuc/prelim-prep/tree/807eeb0f47f3fe55cd02229837fbaf6865987db5" target="_blank">807eeb0</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/daiuc/prelim-prep/tree/56ded550fe47e438ab9997d007565fc1a9864599" target="_blank">56ded55</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -465,6 +465,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/daiuc/prelim-prep/blob/56ded550fe47e438ab9997d007565fc1a9864599/analysis/q5.Rmd" target="_blank">56ded55</a>
+</td>
+<td>
+daiuc
+</td>
+<td>
+2021-09-01
+</td>
+<td>
+wflow_publish(“analysis/q5.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/daiuc/prelim-prep/ba39746529a125cd5458063e1557a119f7f9b774/docs/q5.html" target="_blank">ba39746</a>
+</td>
+<td>
+daiuc
+</td>
+<td>
+2021-09-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -728,36 +762,90 @@ wflow_publish(c(“analysis/index.Rmd”, “analysis/q2.Rmd”, “analysis/q5.
 </div>
 <div id="b" class="section level2">
 <h2>b)</h2>
-<p><strong>A strategy to better integrate eQTL and GWAS data is colocalization analysis. Read the paper presenting the method <code>coloc</code> . Given association data of two traits in one region, <code>coloc</code> tests if there is a common causal variant in the region for both traits. State the five hypothesis <code>coloc</code> is evaluating. Suppose we are given the prior probability a SNP is associated with trait 1, <span class="math inline">\(p_1\)</span> , with trait 2, <span class="math inline">\(p_2\)</span> , and with both traits <span class="math inline">\(p_{12}\)</span> . Let S be a configuration: it is a pair of binary vector of whether a SNP is causal to trait 1 and trait 2 (see Figure 1 for example). What is the prior probability of <span class="math inline">\(S\)</span> when <span class="math inline">\(S\)</span> belongs to each of the five hypothesis?</strong></p>
+<p><strong>A strategy to better integrate eQTL and GWAS data is colocalization analysis. Read the paper presenting the method <code>coloc</code> . Given association data of two traits in one region, <code>coloc</code> tests if there is a common causal variant in the region for both traits. State the five hypothesis <code>coloc</code> is evaluating. Suppose we are given the prior probability a SNP is associated with trait 1, <span class="math inline">\(p_1\)</span> , with trait 2, <span class="math inline">\(p_2\)</span> , and with both traits <span class="math inline">\(p_{12}\)</span> . Let <span class="math inline">\(S\)</span> be a configuration: it is a pair of binary vector of whether a SNP is causal to trait 1 and trait 2 (see Figure 1 for example). What is the prior probability of <span class="math inline">\(S\)</span> when <span class="math inline">\(S\)</span> belongs to each of the five hypothesis?</strong></p>
 <p>Five hypothesis:</p>
 <ul>
-<li><span class="math inline">\(H_0\)</span>: No causal association with either trait 1 or trait 2</li>
-<li><span class="math inline">\(H_1\)</span>: 1 causal SNP associated with trait 1, but no causal SNP for trait 2</li>
-<li><span class="math inline">\(H_2\)</span>: 1 causal SNP associated with trait 2, but no causal SNP for trait 1</li>
-<li><span class="math inline">\(H_3\)</span>: 1 causal SNP associated with trait 1, another different SNP associated with trait 2</li>
-<li><span class="math inline">\(H_4\)</span>: same SNP causal to both trait 1 and trait 2</li>
+<li><span class="math inline">\(H_0\)</span>: No causal association with either trait 1 or trait 2
+<ul>
+<li><span class="math inline">\(P(S_0) = p_0^Q\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_1\)</span>: 1 causal SNP associated with trait 1, but no causal SNP for trait 2
+<ul>
+<li><span class="math inline">\(P(S_1) = p_0^{Q-1}p_1\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_2\)</span>: 1 causal SNP associated with trait 2, but no causal SNP for trait 1
+<ul>
+<li><span class="math inline">\(P(S_2) = p_0^{Q-1}p_2\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_3\)</span>: 1 causal SNP associated with trait 1, another different SNP associated with trait 2
+<ul>
+<li><span class="math inline">\(P(S_3) = p_0^{Q-2} p_1 p_2\)</span></li>
+</ul></li>
+<li><span class="math inline">\(H_4\)</span>: same SNP causal to both trait 1 and trait 2
+<ul>
+<li><span class="math inline">\(P(S_4) = p_0^{Q-1}p_{12}\)</span></li>
+</ul></li>
 </ul>
-<p>Prior probability of <span class="math inline">\(S\)</span>:</p>
 <hr />
 </div>
 <div id="c" class="section level2">
 <h2>c)</h2>
 <p><strong>The evidence of SNP association of a trait can be expressed as Bayes factor (BF), which compares two models, the SNP is associated with the trait vs. not associated. Suppose we know BF of each SNP in the region with respect to the two traits. Derive the posterior probability of colocalization in terms of the BFs of SNPs.</strong></p>
+<p>Assuming <span class="math inline">\(p_0 \approx 1\)</span></p>
+<p><span class="math inline">\(H_0\)</span>: <span class="math display">\[
+\frac{P(H_0 | D)}{P(H_0 | D)} = 1
+\]</span> <span class="math inline">\(H_1\)</span>: <span class="math display">\[
+\frac{P(H_1 | D)}{P(H_0 | D)} = \sum_{S \in H_1} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 \sum_{j=1}^{Q}BF_j^1
+\]</span> <span class="math inline">\(H_2\)</span>: <span class="math display">\[
+\frac{P(H_2 | D)}{P(H_0 | D)} = \sum_{S \in H_2} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^2
+\]</span></p>
+<p><span class="math inline">\(H_3\)</span>: <span class="math display">\[
+\frac{P(H_3 | D)}{P(H_0 | D)} = \sum_{S \in H_3} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 p_2  \sum_{j, k, j\ne k}BF_j^1 BF_k^2
+\]</span> <span class="math inline">\(H_4\)</span>: <span class="math display">\[
+\frac{P(H_4 | D)}{P(H_0 | D)} = \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2
+\]</span></p>
 <hr />
 </div>
 <div id="d" class="section level2">
 <h2>d)</h2>
-<p><strong>It was found that results of coloc are sensitive to prior parameters. A program Enloc is designed to address this problem2 . Explain its main ideas.</strong></p>
+<p><strong>It was found that results of <code>coloc</code> are sensitive to prior parameters. A program <code>Enloc</code> is designed to address this problem. Explain its main ideas.</strong></p>
+<p>In stead of predefining priors such as <span class="math inline">\(p_1\)</span>, <span class="math inline">\(p_2\)</span>, <span class="math inline">\(p_{12}\)</span> in <code>coloc</code>, <code>Enloc</code> equivalently estimates the priors, in the format of enrichment parameters <span class="math inline">\(\alpha_0\)</span>.</p>
+<p>Specifically, it first model GWAS as:</p>
+<p><span class="math display">\[
+{\bf {y}} = \sum_{i=1}^p \beta_i {\bf{g}}_i + {\bf{e}}, {\bf{e}} \sim N(0, \tau^{-1}I).
+\]</span> It then integrate molecular QTL data as annotation <span class="math inline">\(\bf{d}\)</span>, where <span class="math inline">\(\bf{d}\)</span> is a binary indicator variable. To model the uncertainties, <code>Enloc</code> further modeled <span class="math inline">\(\bf{d}\)</span> as a latent variable following the distribution: <span class="math display">\[
+{\bf{d}} \sim Pr({\bf{d}} | {\bf{Y}}_{qtl}, {\bf{G}}_{qtl} ).
+\]</span></p>
+<p>Thus, the colocalization probability can be written as: <span class="math display">\[
+Pr(\gamma_i = 1, d_i = 1 | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}).
+\]</span></p>
+<p><code>Enloc</code> takes 3 primary steps to perform the inference:</p>
+<ol style="list-style-type: decimal">
+<li>Estimate the enrichment parameters <span class="math inline">\({\bf{\alpha}}\)</span></li>
+<li>Taking estimated <span class="math inline">\({\bf{\alpha}}\)</span>, perform fine mapping using approximated PIP <span class="math inline">\(Pr({\bf{\gamma}} | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}, {\bf{\alpha}})\)</span>.</li>
+<li>Evaluate colocalization by computing SCP <span class="math inline">\(Pr(\gamma_i = 1, d_i = 1 | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl})\)</span>, and RCP, which is the sum of SCPs.</li>
+</ol>
+<p><em>NOTE: draw a detailed flowchart to demonstrate all the steps taken</em></p>
 <hr />
 </div>
 <div id="e" class="section level2">
 <h2>e)</h2>
 <p><strong>A naive approach to colocalization is: perform fine-mapping of both traits separately, and this allows one to assess how often a SNP is a causal variant to both traits. It would be the product of Posterior Inclusion Probabilities (PIPs) of the SNP with respect to the two traits. Explain the shortcoming of this approach, in light of <code>Enloc</code>.</strong></p>
+<p>Performing fine-mapping separately effectively assumes that the associations to both traits are mututally independent from one another. In the framework of <code>Enloc</code>, it means <span class="math inline">\(\alpha_1 = 0\)</span>, and equivalently, the colocalization probability can be rewritten as: <span class="math display">\[
+Pr(\gamma_i = 1, d_i = 1 | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}) \
+ = Pr(\gamma_i = 1| {\bf{y}},{\bf{G}}) \cdot Pr( d_i = 1 | {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}).
+\]</span></p>
+<p>Clearly, this is represents a special case of the model in <code>Enloc</code>. One can expect that by defining independence a priori, the number of colocalized signals is likely underestimated. Crucially, one important motivation of performing colocalization is to discover causal relationships between a molecular QTL and a complex trait. Thus assuming independence greatly undermine the purpose of the analyses.</p>
 <hr />
 </div>
 <div id="f" class="section level2">
 <h2>f)</h2>
 <p><strong>The key parameter of <code>Enloc</code> is called <span class="math inline">\(\alpha_1\)</span>. Define the parameter, and explain why it is important in your own language.</strong></p>
+<p><span class="math display">\[
+log \left[ \frac{Pr(\gamma_i = 1)}{Pr(\gamma_i = 0)} \right] = \alpha_0 + \alpha_1 d_i \\
+Pr(\gamma_i = 1, d_i = 1) = \frac{p_\gamma}{1+\frac{1-p_d}{p_d}e^{-\alpha_1}} \\
+\rho = Pr(d_i = 1 | \gamma_i = 1) = \frac{1}{1+\frac{1-p_d}{p_d}e^{-\alpha_1}}
+\]</span></p>
 <hr />
 </div>
 <div id="g" class="section level2">
