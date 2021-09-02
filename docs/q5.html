@@ -408,16 +408,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree96d80b72a27f81af3e51d3728fe31d6ae25370f9targetblank96d80b7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/daiuc/prelim-prep/tree/96d80b72a27f81af3e51d3728fe31d6ae25370f9" target="_blank">96d80b7</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree1cc0f3fd56d8c501d3cd53f2e50a0a3c5845a35ctargetblank1cc0f3fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/daiuc/prelim-prep/tree/1cc0f3fd56d8c501d3cd53f2e50a0a3c5845a35c" target="_blank">1cc0f3f</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree96d80b72a27f81af3e51d3728fe31d6ae25370f9targetblank96d80b7a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree1cc0f3fd56d8c501d3cd53f2e50a0a3c5845a35ctargetblank1cc0f3fa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/daiuc/prelim-prep/tree/96d80b72a27f81af3e51d3728fe31d6ae25370f9" target="_blank">96d80b7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/daiuc/prelim-prep/tree/1cc0f3fd56d8c501d3cd53f2e50a0a3c5845a35c" target="_blank">1cc0f3f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -466,6 +466,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/daiuc/prelim-prep/blob/1cc0f3fd56d8c501d3cd53f2e50a0a3c5845a35c/analysis/q5.Rmd" target="_blank">1cc0f3f</a>
+</td>
+<td>
+daiuc
+</td>
+<td>
+2021-09-02
+</td>
+<td>
+wflow_publish(“analysis/q5.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/daiuc/prelim-prep/3342fe187471198793dfe28711c54096b1b0cd9f/docs/q5.html" target="_blank">3342fe1</a>
+</td>
+<td>
+daiuc
+</td>
+<td>
+2021-09-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -826,24 +860,20 @@ wflow_publish(c(“analysis/index.Rmd”, “analysis/q2.Rmd”, “analysis/q5.
 <div id="c" class="section level2">
 <h2>c)</h2>
 <p><strong>The evidence of SNP association of a trait can be expressed as Bayes factor (BF), which compares two models, the SNP is associated with the trait vs. not associated. Suppose we know BF of each SNP in the region with respect to the two traits. Derive the posterior probability of colocalization in terms of the BFs of SNPs.</strong></p>
-<p>Assuming <span class="math inline">\(p_0 \approx 1\)</span></p>
-<p><span class="math inline">\(H_0\)</span>: <span class="math display">\[
-\frac{P(H_0 | D)}{P(H_0 | D)} = 1
-\]</span> <span class="math inline">\(H_1\)</span>: <span class="math display">\[
-\frac{P(H_1 | D)}{P(H_0 | D)} = \sum_{S \in H_1} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 \sum_{j=1}^{Q}BF_j^1
-\]</span> <span class="math inline">\(H_2\)</span>: <span class="math display">\[
-\frac{P(H_2 | D)}{P(H_0 | D)} = \sum_{S \in H_2} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^2
-\]</span></p>
-<p><span class="math inline">\(H_3\)</span>: <span class="math display">\[
-\frac{P(H_3 | D)}{P(H_0 | D)} = \sum_{S \in H_3} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 p_2  \sum_{j, k, j\ne k}BF_j^1 BF_k^2
-\]</span> <span class="math inline">\(H_4\)</span>: <span class="math display">\[
-\frac{P(H_4 | D)}{P(H_0 | D)} = \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2
-\]</span> In addition: <span class="math display">\[
-P(H_0 | D) + P(H_1 | D) + P(H_2 | D) + P(H_3 | D) + P(H_4 | D) = 1
+<p>Assuming <span class="math inline">\(p_0 \approx 1\)</span>:</p>
+<p><span class="math display">\[
+\begin{align*}
+{\bf{H_0:}} \hspace{1cm} \frac{P(H_0 | D)}{P(H_0 | D)} &amp;= 1  \tag 1 \\
+{\bf{H_1:}} \hspace{1cm} \frac{P(H_1 | D)}{P(H_0 | D)} &amp; = \sum_{S \in H_1} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 \sum_{j=1}^{Q}BF_j^1 \tag 2 \\
+{\bf{H_2:}} \hspace{1cm} \frac{P(H_2 | D)}{P(H_0 | D)} &amp; = \sum_{S \in H_2} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^2 \tag 3 \\
+{\bf{H_3:}} \hspace{1cm}\frac{P(H_3 | D)}{P(H_0 | D)} &amp;= \sum_{S \in H_3} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 p_2  \sum_{j, k, j\ne k}BF_j^1 BF_k^2 \tag 4 \\
+{\bf{H_4:}} \hspace{1cm} \frac{P(H_4 | D)}{P(H_0 | D)} &amp;= \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2 \tag 5 \\
+P(H_0 | D) &amp;+ P(H_1 | D) + P(H_2 | D) + P(H_3 | D) + P(H_4 | D) = 1 \tag 6
+\end{align*}
 \]</span></p>
 </div>
-<div id="solving-systems-of-equations-above-we-can-solve-ph_0-d-ph_1-d-ph_2-d-ph_3-d-and-ph_4-d." class="section level2">
-<h2>Solving systems of equations above, we can solve <span class="math inline">\(P(H_0 | D), P(H_1 | D) , P(H_2 | D) , P(H_3 | D)\)</span>, and <span class="math inline">\(P(H_4 | D)\)</span>.</h2>
+<div id="solving-systems-of-equations-above-2---6-we-can-solve-for-ph_0-d-ph_1-d-ph_2-d-ph_3-d-and-ph_4-d." class="section level2">
+<h2>Solving systems of equations above (2 - 6), we can solve for <span class="math inline">\(P(H_0 | D), P(H_1 | D) , P(H_2 | D) , P(H_3 | D)\)</span>, and <span class="math inline">\(P(H_4 | D)\)</span>.</h2>
 </div>
 <div id="d" class="section level2">
 <h2>d)</h2>
