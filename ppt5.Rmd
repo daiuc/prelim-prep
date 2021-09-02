@@ -1,0 +1,29 @@
+---
+title: 'Question 5: Colocalization'
+author: "Chao Dai"
+date: "9/1/2021"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# abc
+
+- a
+- b
+- c
+
+## Question a)
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Question b
+
+```{r pressure}
+plot(pressure)
+```
+
