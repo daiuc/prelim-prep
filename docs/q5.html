@@ -377,7 +377,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-09-01
+<strong>Last updated:</strong> 2021-09-02
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -408,22 +408,23 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree56ded550fe47e438ab9997d007565fc1a9864599targetblank56ded55a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/daiuc/prelim-prep/tree/56ded550fe47e438ab9997d007565fc1a9864599" target="_blank">56ded55</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree96d80b72a27f81af3e51d3728fe31d6ae25370f9targetblank96d80b7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/daiuc/prelim-prep/tree/96d80b72a27f81af3e51d3728fe31d6ae25370f9" target="_blank">96d80b7</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree56ded550fe47e438ab9997d007565fc1a9864599targetblank56ded55a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaiucprelimpreptree96d80b72a27f81af3e51d3728fe31d6ae25370f9targetblank96d80b7a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/daiuc/prelim-prep/tree/56ded550fe47e438ab9997d007565fc1a9864599" target="_blank">56ded55</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/daiuc/prelim-prep/tree/96d80b72a27f81af3e51d3728fe31d6ae25370f9" target="_blank">96d80b7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
     Ignored:    analysis/q5.nb.html
@@ -465,6 +466,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/daiuc/prelim-prep/blob/96d80b72a27f81af3e51d3728fe31d6ae25370f9/analysis/q5.Rmd" target="_blank">96d80b7</a>
+</td>
+<td>
+daiuc
+</td>
+<td>
+2021-09-02
+</td>
+<td>
+wflow_publish(“analysis/q5.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/daiuc/prelim-prep/4823d845e2c2a745f7e311d392213911b54c1971/docs/q5.html" target="_blank">4823d84</a>
+</td>
+<td>
+daiuc
+</td>
+<td>
+2021-09-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -803,8 +838,12 @@ wflow_publish(c(“analysis/index.Rmd”, “analysis/q2.Rmd”, “analysis/q5.
 \frac{P(H_3 | D)}{P(H_0 | D)} = \sum_{S \in H_3} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 p_2  \sum_{j, k, j\ne k}BF_j^1 BF_k^2
 \]</span> <span class="math inline">\(H_4\)</span>: <span class="math display">\[
 \frac{P(H_4 | D)}{P(H_0 | D)} = \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2
+\]</span> In addition: <span class="math display">\[
+P(H_0 | D) + P(H_1 | D) + P(H_2 | D) + P(H_3 | D) + P(H_4 | D) = 1
 \]</span></p>
-<hr />
+</div>
+<div id="solving-systems-of-equations-above-we-can-solve-ph_0-d-ph_1-d-ph_2-d-ph_3-d-and-ph_4-d." class="section level2">
+<h2>Solving systems of equations above, we can solve <span class="math inline">\(P(H_0 | D), P(H_1 | D) , P(H_2 | D) , P(H_3 | D)\)</span>, and <span class="math inline">\(P(H_4 | D)\)</span>.</h2>
 </div>
 <div id="d" class="section level2">
 <h2>d)</h2>
