@@ -28,7 +28,7 @@ Reasons include:
 
 ## b) 
 
-**A strategy to better integrate eQTL and GWAS data is colocalization analysis. Read the paper presenting the method `coloc` . Given association data of two traits in one region, `coloc` tests if there is a common causal variant in the region for both traits. State the five hypothesis `coloc` is evaluating. Suppose we are given the prior probability a SNP is associated with trait 1, $p_1$ , with trait 2, $p_2$ , and with both traits $p_{12} . Let S be a configuration: it is a pair of binary vector of whether a SNP is causal to trait 1 and trait 2 (see Figure 1 for example). What is the prior probability of $S$ when $S$ belongs to each of the five hypothesis?**
+**A strategy to better integrate eQTL and GWAS data is colocalization analysis. Read the paper presenting the method `coloc` . Given association data of two traits in one region, `coloc` tests if there is a common causal variant in the region for both traits. State the five hypothesis `coloc` is evaluating. Suppose we are given the prior probability a SNP is associated with trait 1, $p_1$ , with trait 2, $p_2$ , and with both traits $p_{12}$ . Let S be a configuration: it is a pair of binary vector of whether a SNP is causal to trait 1 and trait 2 (see Figure 1 for example). What is the prior probability of $S$ when $S$ belongs to each of the five hypothesis?**
 
 Five hypothesis: 
 
