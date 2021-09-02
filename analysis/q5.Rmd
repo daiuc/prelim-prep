@@ -50,7 +50,7 @@ Five hypothesis:
 
 **The evidence of SNP association of a trait can be expressed as Bayes factor (BF), which compares two models, the SNP is associated with the trait vs. not associated. Suppose we know BF of each SNP in the region with respect to the two traits. Derive the posterior probability of colocalization in terms of the BFs of SNPs.**
 
-Assuming $p_0 \approx 1$, and solving systems of equations below (2 - 6), we can solve for $P(H_0 | D),  P(H_1 | D) , P(H_2 | D) , P(H_3 | D), and ~ P(H_4 | D)$. 
+Assuming $p_0 \approx 1$, and solving systems of equations below (2 - 6), we can solve for $P(H_0 | D)$, $P(H_1 | D)$, $P(H_2 | D)$, $P(H_3 | D)$, and $P(H_4 | D)$. 
 
 $$
 \begin{align*}
