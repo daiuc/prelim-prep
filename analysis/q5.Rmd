@@ -73,7 +73,12 @@ $H_4$:
 $$
 \frac{P(H_4 | D)}{P(H_0 | D)} = \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2
 $$
+In addition: 
+$$
+P(H_0 | D) + P(H_1 | D) + P(H_2 | D) + P(H_3 | D) + P(H_4 | D) = 1
+$$
 
+Solving systems of equations above, we can solve $P(H_0 | D),  P(H_1 | D) , P(H_2 | D) , P(H_3 | D)$, and $P(H_4 | D)$. 
 ------------------------------------------------------------------------
 
 ## d) 
