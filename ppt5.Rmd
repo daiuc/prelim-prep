@@ -9,19 +9,20 @@ output: beamer_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# abc
+# abc 
 
+- d
 - a
 - b
 - c
 
-## Question a)
+# Question a)
 
 ```{r cars, echo = TRUE}
 summary(cars)
 ```
 
-## Question b
+# Question b
 
 ```{r pressure}
 plot(pressure)
