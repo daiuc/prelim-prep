@@ -28,17 +28,21 @@ Reasons include:
 
 ## b) 
 
-**A strategy to better integrate eQTL and GWAS data is colocalization analysis. Read the paper presenting the method `coloc` . Given association data of two traits in one region, `coloc` tests if there is a common causal variant in the region for both traits. State the five hypothesis `coloc` is evaluating. Suppose we are given the prior probability a SNP is associated with trait 1, $p_1$ , with trait 2, $p_2$ , and with both traits $p_{12}$ . Let S be a configuration: it is a pair of binary vector of whether a SNP is causal to trait 1 and trait 2 (see Figure 1 for example). What is the prior probability of $S$ when $S$ belongs to each of the five hypothesis?**
+**A strategy to better integrate eQTL and GWAS data is colocalization analysis. Read the paper presenting the method `coloc` . Given association data of two traits in one region, `coloc` tests if there is a common causal variant in the region for both traits. State the five hypothesis `coloc` is evaluating. Suppose we are given the prior probability a SNP is associated with trait 1, $p_1$ , with trait 2, $p_2$ , and with both traits $p_{12}$ . Let $S$ be a configuration: it is a pair of binary vector of whether a SNP is causal to trait 1 and trait 2 (see Figure 1 for example). What is the prior probability of $S$ when $S$ belongs to each of the five hypothesis?**
 
 Five hypothesis: 
 
-* $H_0$: No causal association with either trait 1 or trait 2 
+* $H_0$: No causal association with either trait 1 or trait 2
+  - $P(S_0) = p_0^Q$
 * $H_1$: 1 causal SNP associated with trait 1, but no causal SNP for trait 2 
+  - $P(S_1) = p_0^{Q-1}p_1$
 * $H_2$: 1 causal SNP associated with trait 2, but no causal SNP for trait 1 
+  - $P(S_2) = p_0^{Q-1}p_2$
 * $H_3$: 1 causal SNP associated with trait 1, another different SNP associated with trait 2 
+  - $P(S_3) = p_0^{Q-2} p_1 p_2$
 * $H_4$: same SNP causal to both trait 1 and trait 2
+  - $P(S_4) = p_0^{Q-1}p_{12}$
 
-Prior probability of $S$:
 
 ------------------------------------------------------------------------
 
@@ -46,11 +50,60 @@ Prior probability of $S$:
 
 **The evidence of SNP association of a trait can be expressed as Bayes factor (BF), which compares two models, the SNP is associated with the trait vs. not associated. Suppose we know BF of each SNP in the region with respect to the two traits. Derive the posterior probability of colocalization in terms of the BFs of SNPs.**
 
+Assuming $p_0 \approx 1$
+
+$H_0$: 
+$$
+\frac{P(H_0 | D)}{P(H_0 | D)} = 1
+$$
+$H_1$:
+$$
+\frac{P(H_1 | D)}{P(H_0 | D)} = \sum_{S \in H_1} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 \sum_{j=1}^{Q}BF_j^1
+$$
+$H_2$:
+$$
+\frac{P(H_2 | D)}{P(H_0 | D)} = \sum_{S \in H_2} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^2
+$$
+
+$H_3$:
+$$
+\frac{P(H_3 | D)}{P(H_0 | D)} = \sum_{S \in H_3} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 p_2  \sum_{j, k, j\ne k}BF_j^1 BF_k^2
+$$
+$H_4$:
+$$
+\frac{P(H_4 | D)}{P(H_0 | D)} = \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2
+$$
+
 ------------------------------------------------------------------------
 
 ## d) 
 
-**It was found that results of coloc are sensitive to prior parameters. A program Enloc is designed to address this problem2 . Explain its main ideas.**
+**It was found that results of `coloc` are sensitive to prior parameters. A program `Enloc` is designed to address this problem. Explain its main ideas.**
+
+In stead of predefining priors such as $p_1$, $p_2$, $p_{12}$ in `coloc`, `Enloc` equivalently estimates the priors, in the format of enrichment parameters $\alpha_0$. 
+
+Specifically, it first model GWAS as:
+
+$$
+{\bf {y}} = \sum_{i=1}^p \beta_i {\bf{g}}_i + {\bf{e}}, {\bf{e}} \sim N(0, \tau^{-1}I).
+$$
+It then integrate molecular QTL data as annotation $\bf{d}$, where $\bf{d}$ is a binary indicator variable. To model the uncertainties, `Enloc` further modeled $\bf{d}$ as a latent variable following the distribution:
+$$
+{\bf{d}} \sim Pr({\bf{d}} | {\bf{Y}}_{qtl}, {\bf{G}}_{qtl} ).
+$$
+
+Thus, the colocalization probability can be written as:
+$$
+Pr(\gamma_i = 1, d_i = 1 | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}).
+$$
+
+`Enloc` takes 3 primary steps to perform the inference:
+
+1. Estimate the enrichment parameters ${\bf{\alpha}}$
+2. Taking estimated ${\bf{\alpha}}$, perform fine mapping using approximated PIP $Pr({\bf{\gamma}} | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}, {\bf{\alpha}})$.
+3. Evaluate colocalization by computing SCP $Pr(\gamma_i = 1, d_i = 1 | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl})$, and RCP, which is the sum of SCPs.
+
+*NOTE: draw a detailed flowchart to demonstrate all the steps taken*
 
 ------------------------------------------------------------------------
 
@@ -58,11 +111,28 @@ Prior probability of $S$:
 
 **A naive approach to colocalization is: perform fine-mapping of both traits separately, and this allows one to assess how often a SNP is a causal variant to both traits. It would be the product of Posterior Inclusion Probabilities (PIPs) of the SNP with respect to the two traits. Explain the shortcoming of this approach, in light of `Enloc`.**
 
+Performing fine-mapping separately effectively assumes that the associations to both traits are mututally independent from one another. In the framework of `Enloc`, it means $\alpha_1 = 0$, and equivalently, the colocalization probability can be rewritten as: 
+$$
+Pr(\gamma_i = 1, d_i = 1 | {\bf{y}},{\bf{G}}, {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}) \
+ = Pr(\gamma_i = 1| {\bf{y}},{\bf{G}}) \cdot Pr( d_i = 1 | {\bf{Y}}_{qtl}, {\bf{G}}_{qtl}).
+$$
+
+Clearly, this is represents a special case of the model in `Enloc`. One can expect that by defining independence a priori, the number of colocalized signals is likely underestimated. Crucially, one important motivation of performing colocalization is to discover causal relationships between a molecular QTL and a complex trait. Thus assuming independence greatly undermine the purpose of the analyses.
+
+
+
 ------------------------------------------------------------------------
 
 ## f) 
 
 **The key parameter of `Enloc` is called $\alpha_1$. Define the parameter, and explain why it is important in your own language.**
+
+$$
+log \left[ \frac{Pr(\gamma_i = 1)}{Pr(\gamma_i = 0)} \right] = \alpha_0 + \alpha_1 d_i \\
+Pr(\gamma_i = 1, d_i = 1) = \frac{p_\gamma}{1+\frac{1-p_d}{p_d}e^{-\alpha_1}} \\
+\rho = Pr(d_i = 1 | \gamma_i = 1) = \frac{1}{1+\frac{1-p_d}{p_d}e^{-\alpha_1}}
+$$
+
 
 ------------------------------------------------------------------------
 
