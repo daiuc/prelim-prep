@@ -63,8 +63,9 @@ P(H_0 | D) &+ P(H_1 | D) + P(H_2 | D) + P(H_3 | D) + P(H_4 | D) = 1 \tag 6
 \end{align*}
 $$
 
+Solving systems of equations above (2 - 6), we can solve for $P(H_0 | D),  P(H_1 | D) , P(H_2 | D) , P(H_3 | D), and ~ P(H_4 | D)$. 
 
-Solving systems of equations above (2 - 6), we can solve for $P(H_0 | D),  P(H_1 | D) , P(H_2 | D) , P(H_3 | D)$, and $P(H_4 | D)$. 
+
 ------------------------------------------------------------------------
 
 ## d) 
