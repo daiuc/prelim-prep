@@ -132,5 +132,17 @@ $$
 
 **Explain how `Enloc` is related to `coloc`, and why it may provide some advantages.**
 
+- predifined prior vs. estimated
+- limit of maximum 1 causal variant per trait vs. multiple causal eQTL variants allowed
+
+$$
+\begin{align*}
+p1 &:= Pr(\gamma_i = 1, d_i = 0) = \frac{e^\alpha_0}{1 + e^\alpha_0} \cdot [1-Pr(d_i = 1)] \\
+p2 &:= Pr(\gamma_i = 0, d_i = 1) = \frac{1}{1 + e^{\alpha_0+\alpha_1}} \cdot Pr(d_i=1) \\
+p3 &:= Pr(\gamma_i = 1, d_i = 1) = \frac{e^{\alpha_0+\alpha_1}}{1 + e^{\alpha_0+\alpha_1}} \cdot Pr(d_i=1) \\
+Pr&(d_i = 1) := Pr(d_i = 1 | {\bf{Y_{qtl}}}, {\bf{G_{qtl}}})
+\end{align*}
+$$
+
 
 
