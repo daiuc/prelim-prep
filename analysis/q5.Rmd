@@ -58,7 +58,7 @@ $$
 {\bf{H_1:}} \hspace{1cm} \frac{P(H_1 | D)}{P(H_0 | D)} & = \sum_{S \in H_1} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 \sum_{j=1}^{Q}BF_j^1 \tag 2 \\
 {\bf{H_2:}} \hspace{1cm} \frac{P(H_2 | D)}{P(H_0 | D)} & = \sum_{S \in H_2} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^2 \tag 3 \\
 {\bf{H_3:}} \hspace{1cm}\frac{P(H_3 | D)}{P(H_0 | D)} &= \sum_{S \in H_3} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_1 p_2  \sum_{j, k, j\ne k}BF_j^1 BF_k^2 \tag 4 \\
-{\bf{H_4:}} \hspace{1cm} \frac{P(H_4 | D)}{P(H_0 | D)} &= \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_2 \sum_{j=1}^{Q}BF_j^1 BF_j^2 \tag 5 \\
+{\bf{H_4:}} \hspace{1cm} \frac{P(H_4 | D)}{P(H_0 | D)} &= \sum_{S \in H_4} \frac{P(D | S)}{P(D | S_0)} \frac{P(S)}{P(S_0)} \approx p_{12} \sum_{j=1}^{Q}BF_j^1 BF_j^2 \tag 5 \\
 P(H_0 | D) &+ P(H_1 | D) + P(H_2 | D) + P(H_3 | D) + P(H_4 | D) = 1 \tag 6
 \end{align*}
 $$
