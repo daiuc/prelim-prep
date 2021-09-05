@@ -7,23 +7,82 @@ editor_options:
   chunk_output_type: console
 ---
 
-## a) 
+## a)
 
 **Please describe the major classes of diseases targeted by gene therapy either as approved treatments or at the research stage. Please explain why these diseases are particularly conducive to gene therapy. Conversely, please describe what types of diseases are not conducive to gene therapy at present and why.**
 
+**Major classes of diseases**:
 
+So far all gene therapy targeted diseases that are caused by monogeneic loss of function mutations.
 
----
+-   These are particularly conducive to gene therapy because we can design specific corrective transgenes that provide the functions of the mutated genes.
 
+-   Two major classes of diseases:
 
-## b) 
+    -   typically to correct monogenic mutations in progenitor blood cells, e.g HSPC. This includes ADA-SCID, SCID-X1. These procedures require stable integration of transgenes into the genomes of progenitor cells, often tranduced ex vivo and then transplanted into the patients
+
+    -   Or monogenic disorders in differentiated cells that are slow dividing. a corrected transgene can be delivered to these cells via rAAV in vivo. Transgenes are transcribed as episomes in the transducted cells.
+
+**Diseases not conducive to gene therapy**
+
+-   Complex diseases or disease traits associated with many genetic loci. Transgenes has to be delivered into cells via either viral vectors, both have a limitations on DNA payloads. It's often difficult to deliver multiple transgenes in one vector. In addition, there is limitations on transduction efficiency, thus correctly delivering the correct combination of episomes into each cell is very challenging
+
+-   Current gene therapy target loss-of-function mutation in exons, not regulatory regions such as enhancers. e.g. a subtype of $\beta$ thalassemia is caused by mutations. It is difficult to insert correct regulatory sequences in the correct biological context (cell type, 3D organization, etc.)
+
+-   Monogenic dominant mutations. Dominant mutations may require gene silencing in addition to transgene addition. While experimentally possible, many risks are still need to be mitigated before clinical trials.
+
+------------------------------------------------------------------------
+
+## b)
 
 **What are the major limitations and challenges in the effective use of gene therapy?**
 
 
----
+- safty
+  - risk of insertional mutations associated with RV vectors
+  - immune response associated with rAAV vectors
+  - preconditioning procedures may impose secondary risks: such as chemotherapy induced tumor development, etc.
+- efficacy
+  - sufficient corrected cells
+  - transduction efficiency
+  - transgene copy numbers
+  - transgene expression levels
+  - payload limitations
+  - transgene persistence
+- production
+  - limitation to reach the scale required by therapeutics
+  - cost
 
+------------------------------------------------------------------------
 
-## c) 
+## c)
 
 **Lentivirus (LV) and adeno-associated virus (AAV) are currently the most popular gene therapy vectors. Please describe the pros and cons of LV and AAV, and what types of diseases they are each suitable for.**
+
+**LV:**
+
+- suitable for diseases caused by dysfunctioal cells have are high turnver (g.g. fast dividing), thus require transgene integration to the genome of progenitor cells.
+- pros:
+  - transgene persists in differentiated cells, thus patient may recover complete function without further treatment
+  - ex-vivo, thus subject to less immune response
+  - easier to scale up production
+  - larger payload ~8kb
+- cons:
+  - risks of insertional mutagenesis
+  - engraftment require preconditioning
+  - cost
+
+**AAV:**
+
+- suitable for diseases caused by monogeneic dysfunctional cells that are slow-deividing. Transgene can be delivered in vivo to either localized tissues or systematically.
+- pros:
+  - in vivo delivery, can be delivered locally (local injection) or systematically
+  - no preconditioning required
+  - smaller payload < 5kb
+  - episomes gradually lost as cells divide, thus may require repeatative treatment
+  - in vivo viral vector subject to immune response, thus reduce transduction efficacy
+  - may cause adverse immune response
+- cons:
+  - rate limiting second strand synthesis
+  - difficult to scale up production to therapeutic level
+  - cost
