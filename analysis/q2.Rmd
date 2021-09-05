@@ -61,7 +61,7 @@ So far all gene therapy targeted diseases that are caused by monogeneic loss of 
 
 **LV:**
 
-- suitable for diseases caused by dysfunctioal cells have are high turnver (g.g. fast dividing), thus require transgene integration to the genome of progenitor cells.
+- suitable for diseases caused by dysfunctioal cells have are high turnver (g.g. fast dividing), thus require transgene integration to the genome of progenitor cells. CAR-T treatment for certain types of blood cancer.
 - pros:
   - transgene persists in differentiated cells, thus patient may recover complete function without further treatment
   - ex-vivo, thus subject to less immune response
